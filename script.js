@@ -20,31 +20,31 @@ request.onload = function(){
 
 
 
-  // a) print the details of all countries comes the Asia Region
- var data = res.filter((ele)=>ele.region == "Asia");
-console.log(data);
+ // a) print the details of all countries comes the Asia Region
+  var data = res.filter((ele)=>ele.region == "Asia");
+ console.log(data);
 
 
 
 
 
 
- // b)Get all the countries with a population of less than 2 lakhs using Filter methods
+  // b)Get all the countries with a population of less than 2 lakhs using Filter methods
 
- var popu = res.filter((ele)=>ele.population>200000);
-console.log(popu);
-
-
+   var popu = res.filter((ele)=>ele.population>200000);
+ console.log(popu);
 
 
 
-//c)Print the following details name, capital, flag, using forEach method
-countries.forEach(country => {
-    console.log("Country: " + country.name);
-    console.log("Capital: " + country.capital);
-    console.log("Flag: " + country.flag);
-    console.log(""); // For spacing between countries
-});
+
+
+  //c)Print the following details name, capital, flag, using forEach method
+  res.forEach(country => {
+    console.log("country: " + country.name.common);
+      console.log("Capital: " + country.capital);
+      console.log("Flag: " + country.flag);
+    console.log(res); // For spacing between countries
+  });
 
 
 
@@ -53,7 +53,7 @@ countries.forEach(country => {
 
 var casia = res.filter((ele)=>ele.region =="total population");
 
-var cpopu= casia.reduce((acc,cv)=>acc+cv.population,0);
+var cpopu= res.reduce((acc,cv)=>acc+cv.population,0);
 console.log(cpopu);
 
 
