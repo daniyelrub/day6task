@@ -1,0 +1,10 @@
+ <h3>ARRAY METHODS</h3>
+
+<h5>
+1.Solving problems using array functions on rest countries data (https://restcountries.com/v3.1/all).<br>.
+a)Get all the countries from Asia continent /region using Filter method.<br>.
+b)Get all the countries with a population of less than 2 lakhs using Filter method.<br>.
+c)Print the following details name, capital, flag, using forEach method.<br>.
+d)Print the total population of countries using reduce method.<br>.
+e)Print the country that uses US dollars as currency..<br>.
+</h5>
