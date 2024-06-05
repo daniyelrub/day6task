@@ -31,7 +31,7 @@ request.onload = function(){
 
   // b)Get all the countries with a population of less than 2 lakhs using Filter methods
 
-   var popu = res.filter((ele)=>ele.population>200000);
+   var popu = res.filter((ele)=>ele.population<200000);
  console.log(popu);
 
 
@@ -43,7 +43,7 @@ request.onload = function(){
     console.log("country: " + country.name.common);
       console.log("Capital: " + country.capital);
       console.log("Flag: " + country.flag);
-    console.log(res); // For spacing between countries
+    console.log(country); // For spacing between countries
   });
 
 
@@ -60,18 +60,12 @@ console.log(cpopu);
 
 
 
-// e) Filter countries that use US dollars as currency
-const countriesWithUSD = countries.filter(country => country.currency === "US Dollar");
 
-// Print the country that uses US dollars
-if (countriesWithUSD.length > 0) {
-    console.log("Country(s) that use US Dollar as currency:");
-    countriesWithUSD.forEach(country => {
-        console.log(country.name);
-    });
-} else {
-    console.log("No country found that uses US Dollar as currency.");
-}
+//e) Filter countries that use US dollars as currency
+const usdCountries = res.filter(country => country.currencies && country.currencies.USD);
+
+console.log(usdCountries);
+
 
 
 
